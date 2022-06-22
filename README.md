@@ -1,5 +1,8 @@
 <h1 align="center">ClassTube</h1>
 <p>Projeto criado no evento Ignite-lab da Rocketseat<p>
+
+<p>Em construção...</p>
+
 <h2>Tecnologias usadas</h2>
 
 &#9881; Vite
@@ -48,7 +51,7 @@ Tailwind
     	/styles
     		global.css
 
-Sites úteis
+<h2>Sites úteis</h2>
 
 Tranformar svg em component: https://svg2jsx.com/
 
