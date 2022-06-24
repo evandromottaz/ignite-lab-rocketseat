@@ -4,6 +4,10 @@ module.exports = {
     './src/**/*.tsx'
   ],
   theme: {
+    screens: {
+      'mobile': {'max': '650px'},
+      'tablet': {'max':'768px'},
+    },
     extend: {
       fontFamily: {
         sans:'Roboto, sans-serif',

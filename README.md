@@ -64,3 +64,40 @@ Tranformar svg em component: https://svg2jsx.com/
 - Apollo - https://www.apollographql.com/docs/react/data/queries
 
 - Date-fns - https://date-fns.org/v2.28.0/docs/format
+
+
+aula 3
+
+aspect-video - 16/9 screen
+React Youtube
+react-router-dom
+	BrowserRouter
+		App
+	BrowserRouter
+
+- Router.tsx
+	Routes
+		Route path="/:id" element={Component}
+	Routes
+
+- Component
+
+
+Tailwind
+agrupar elementos para ter o efeito hover.
+	elemento pai className="group"
+		filho className="group-hover:text-green-100"
+
+
+Desafios
+- responsive
+- Criar componente de botão [x]
+- Redirecionar o usuário para a primeira aula se não tiver o slug
+- Criar componente de loading
+
+Conquistas
+- Typescript
+consegui criar um tipo que aceita object literals.
+https://www.typescriptlang.org/docs/handbook/2/objects.html#index-signatures
+
+Resolvido children props https://stackoverflow.com/questions/71788254/react-18-typescript-children-fc
