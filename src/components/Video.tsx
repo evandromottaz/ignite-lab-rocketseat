@@ -4,6 +4,7 @@ import '@vime/core/themes/default.css'
 import { Button } from "./Button";
 import { VideoPlayer } from "./VideoPlayer";
 import { Teacher } from "./Teacher";
+import { Card } from "./Card";
 
 const GET_LESSON_SLUG = gql`
     query getLessonSlug($slug: String) {
@@ -79,45 +80,17 @@ export function Video({ lessonSlug }: VideoProps) {
                 </div>
 
                 <div className="gap-8 mt-20 grid grid-cols-2">
-                    <a className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors" href="">
-                        <div className="bg-green-700 h-full p-6 flex items-center">
-                            <FileArrowDown size={40} />
-                        </div>
+                    <Card
+                        title="Material complementar"
+                        url="https://efficient-sloth-d85.notion.site/Material-complementar-86d4ef35af16471ebc3ae3eba1a378e5">
+                        Acesse o material complementar para acelerar o seu desenvolvimento
+                    </Card>
 
-                        <a href="https://efficient-sloth-d85.notion.site/Material-complementar-86d4ef35af16471ebc3ae3eba1a378e5" className="py-6 leading-relaxed">
-                            <strong className="text-2xl">
-                                Material Complementar
-                            </strong>
-
-                            <p className="text-sm text-gray-200 mt-2">
-                                Acesse o material complementar para acelerar o seu desenvolvimento
-                            </p>
-                        </a>
-
-                        <div className="h-full p-6 flex items-center">
-                            <CaretRight size={24} />
-                        </div>
-                    </a>
-
-                    <a href="https://drive.google.com/drive/folders/1mxWnvlqmH7MbVRv2Na9xFNgCQCygM1iR?usp=sharing" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors" >
-                        <div className="bg-green-700 h-full p-6 flex items-center">
-                            <FileArrowDown size={40} />
-                        </div>
-
-                        <div className="py-6 leading-relaxed">
-                            <strong className="text-2xl">
-                                Wallpapers exclusivos
-                            </strong>
-
-                            <p className="text-sm text-gray-200 mt-2">
-                                Baixe wallpapers exclusivos do Ignite Lab e personalize a sua máquina
-                            </p>
-                        </div>
-
-                        <div className="h-full p-6 flex items-center">
-                            <CaretRight size={24} />
-                        </div>
-                    </a>
+                    <Card
+                        title="Wallpapers exclusivos"
+                        url="https://drive.google.com/drive/folders/1mxWnvlqmH7MbVRv2Na9xFNgCQCygM1iR?usp=sharing">
+                        Baixe wallpapers exclusivos do Ignite Lab e personalize a sua máquina
+                    </Card>
                 </div>
             </div>
         </div>
