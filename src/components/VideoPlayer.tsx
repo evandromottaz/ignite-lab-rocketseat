@@ -1,5 +1,4 @@
 import { DefaultUi, Player, Youtube } from "@vime/react";
-import { Play } from "phosphor-react";
 
 type VideoPlayerProps = {
     videoId: string
