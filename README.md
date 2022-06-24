@@ -94,6 +94,8 @@ Desafios
 - Criar componente de botão [x]
 - Redirecionar o usuário para a primeira aula se não tiver o slug [x]
 - Criar componente de loading
+- Home toda desk e mobile [x]
+- Event toda desk e mobile
 
 Problemas resolvidos
 - Typescript

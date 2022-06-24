@@ -84,7 +84,7 @@ export function Video({ lessonSlug }: VideoProps) {
                             <FileArrowDown size={40} />
                         </div>
 
-                        <div className="py-6 leading-relaxed">
+                        <a href="https://efficient-sloth-d85.notion.site/Material-complementar-86d4ef35af16471ebc3ae3eba1a378e5" className="py-6 leading-relaxed">
                             <strong className="text-2xl">
                                 Material Complementar
                             </strong>
@@ -92,14 +92,14 @@ export function Video({ lessonSlug }: VideoProps) {
                             <p className="text-sm text-gray-200 mt-2">
                                 Acesse o material complementar para acelerar o seu desenvolvimento
                             </p>
-                        </div>
+                        </a>
 
                         <div className="h-full p-6 flex items-center">
                             <CaretRight size={24} />
                         </div>
                     </a>
 
-                    <a className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors" href="">
+                    <a href="https://drive.google.com/drive/folders/1mxWnvlqmH7MbVRv2Na9xFNgCQCygM1iR?usp=sharing" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors" >
                         <div className="bg-green-700 h-full p-6 flex items-center">
                             <FileArrowDown size={40} />
                         </div>
