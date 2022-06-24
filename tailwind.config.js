@@ -9,6 +9,9 @@ module.exports = {
       'tablet': {'max':'768px'},
     },
     extend: {
+      backgroundImage: {
+        blur:'url(/src/assets/blur-home.png)'
+      },
       fontFamily: {
         sans:'Roboto, sans-serif',
       },

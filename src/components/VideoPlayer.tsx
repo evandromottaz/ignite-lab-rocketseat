@@ -1,4 +1,4 @@
-import { ClickToPlay, Controls, ControlSpacer, DefaultSettings, DefaultUi, MuteControl, PlaybackControl, Player, Scrim, TimeProgress, Ui, Youtube } from "@vime/react";
+import { DefaultUi, Player, Youtube } from "@vime/react";
 import { Play } from "phosphor-react";
 
 type VideoPlayerProps = {
@@ -11,13 +11,7 @@ export function VideoPlayer({ videoId }: VideoPlayerProps) {
             <div className="flex-1 w-full max-w-[1092px] grid grid-rows-1">
                 <Player>
                     <Youtube videoId={videoId} key={videoId} />
-                    <DefaultUi noControls>
-                        <Play
-                            size={48}
-                            weight="fill"
-                            className="z-50 row-start-1"
-                        />
-                    </DefaultUi>
+                    <DefaultUi />
                 </Player>
             </div>
         </div>

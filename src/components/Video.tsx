@@ -1,7 +1,7 @@
 import { CaretRight, Coffee, DiscordLogo, FileArrowDown, Lightning } from "phosphor-react";
 import { gql, useQuery } from "@apollo/client";
 import '@vime/core/themes/default.css'
-import { Button } from "./button";
+import { Button } from "./Button";
 import { VideoPlayer } from "./VideoPlayer";
 import { Teacher } from "./Teacher";
 
