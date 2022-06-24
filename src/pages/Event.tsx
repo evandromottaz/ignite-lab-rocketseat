@@ -5,9 +5,8 @@ import { Video } from "../components/Video";
 
 export function Event() {
     let { slug } = useParams<{ slug: string }>()
-    const navigate = useNavigate()
 
-    if (!slug) slug = 'abertura-do-evento-ignite-lab'
+    // if (!slug) slug = 'abertura-do-evento-ignite-lab'
 
     return (
         <div className="flex flex-col min-h-screen">

@@ -92,10 +92,10 @@ agrupar elementos para ter o efeito hover.
 Desafios
 - responsive
 - Criar componente de botão [x]
-- Redirecionar o usuário para a primeira aula se não tiver o slug
+- Redirecionar o usuário para a primeira aula se não tiver o slug [x]
 - Criar componente de loading
 
-Conquistas
+Problemas resolvidos
 - Typescript
 consegui criar um tipo que aceita object literals.
 https://www.typescriptlang.org/docs/handbook/2/objects.html#index-signatures
@@ -175,3 +175,14 @@ Code error:
 - Typescript
 Evento de form
 	FormEvent
+
+Problemas resolvidos:
+Permissão de busca de aulas no graphCMS
+
+lib
+classnames
+	npm i classnames
+	ex:
+	className={
+		classNames('text-blue-200 text-sm', {'text-bold': isBold})
+	}
