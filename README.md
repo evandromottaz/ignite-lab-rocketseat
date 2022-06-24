@@ -101,3 +101,45 @@ consegui criar um tipo que aceita object literals.
 https://www.typescriptlang.org/docs/handbook/2/objects.html#index-signatures
 
 Resolvido children props https://stackoverflow.com/questions/71788254/react-18-typescript-children-fc
+
+Aula 4
+GraphCMS Mutation
+	API Playground
+		Add new [Mutation] click "+"
+
+		ex:
+		mutation CreateSubscriber($name: String!, $email: String!) {
+			createSubscriber(data: {name: $name, email: $email}) {
+				id
+			}
+		}
+
+Para fazer método POST no graphCMS, é recomendado criar um token
+- Criar o token
+	Project Settings
+		Public Content API
+			Create Token
+
+Para não permitir que o front crie novos campos da tabela
+	Management API
+		No i'll configure....
+
+Permite a leitura de todos os dados
+	Content API
+		Yes..
+
+Criar cadastros na subscriber
+	+ Create Permission
+		Model Subscriber
+			[x] Create
+
+Pegar o token criado
+	Value
+		inserir no appolo.ts
+
+Criar variáveis de ambiente
+crie um arquivo .env.local na raiz com nome
+	VITE_QUALQUER_COISA
+
+para importar
+	import.meta.env
