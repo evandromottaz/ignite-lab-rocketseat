@@ -1,7 +1,9 @@
 import { gql, useMutation } from "@apollo/client";
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
+import { ReactLogo } from "../components/ReactLogo";
 
 const CREATE_SUBSCRIBER_MUTATION = gql`
     mutation CreateSubscriber($name: String!, $email: String!) {
@@ -31,52 +33,57 @@ export function Home() {
     }
 
     return (
-        <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
-            <div className="w-full max-w-[1100px] flex justify-between mt-20 mx-auto flex-wrap mobile:justify-center">
-                <div className="max-w-[640px] mobile:flex mobile:items-center mobile:flex-col px-7">
-                    <Logo />
+        <>
+            <div className="bg-blur bg-cover bg-no-repeat flex flex-col items-center relative">
+                <ReactLogo />
 
-                    <h1 className="mt-8 text-4xl leading-tight mobile:text-center mobile:text-3xl">
-                        Construa uma <strong className="text-blue-500 inline-block">aplicação completa</strong>, do zero, com <strong className="text-blue-500">React JS</strong>
-                    </h1>
+                <div className="w-full max-w-[1100px] flex justify-between mt-20 mx-auto tablet:flex-wrap tablet:justify-center">
+                    <div className="min-w-[390px] max-w-[640px] mobile:block px-7">
+                        <Logo />
 
-                    <p className="mt-4 text-gray-200 leading-relaxed mobile:text-center mobile:mb-8 mobile:text-sm">
-                        Em apenas uma semana você vai dominar na prática uma das tecnologias mais utilizadas e com alta demanda para acessar as melhores oportunidades do mercado.
-                    </p>
+                        <h1 className="mt-8 text-4xl leading-tight tablet:text-center mobile:text-3xl">
+                            Construa uma <strong className="text-blue-500 inline-block">aplicação completa</strong>, do zero, com <strong className="text-blue-500">React JS</strong>
+                        </h1>
+
+                        <p className="mt-4 text-gray-200 leading-relaxed tablet:text-center tablet:mb-8 mobile:text-sm">
+                            Em apenas uma semana você vai dominar na prática uma das tecnologias mais utilizadas e com alta demanda para acessar as melhores oportunidades do mercado.
+                        </p>
+                    </div>
+
+                    <div className="min-w-fit p-8 bg-gray-700 border border-gray-500 rounded mobile:w-full mr-6 z-10">
+                        <strong className="text-2xl mb-6 block mobile:text-lg">
+                            Inscreva-se gratuitamente
+                        </strong>
+
+                        <form
+                            onSubmit={handleSubmit} className="flex flex-col w-full gap-2">
+                            <input
+                                onChange={({ target }) => setName(target.value)}
+                                type="text"
+                                placeholder="Seu nome completo"
+                                className="bg-gray-900 rounded px-5 h-14"
+                            />
+
+                            <input
+                                onChange={({ target }) => setEmail(target.value)}
+                                type="email"
+                                placeholder="Digite seu email"
+                                className="bg-gray-900 rounded px-5 h-14"
+                            />
+
+                            <button
+                                disabled={loading}
+                                type="submit"
+                                className="mt-4 bg-green-500 uppercase py-4 rounded font-bold text-sm hover:bg-green-700 transition disabled:opacity-50">
+                                garantir minha vaga
+                            </button>
+                        </form>
+                    </div>
                 </div>
 
-                <div className="p-8 bg-gray-700 border border-gray-500 rounded mobile:w-full">
-                    <strong className="text-2xl mb-6 block mobile:text-lg">
-                        Inscreva-se gratuitamente
-                    </strong>
-
-                    <form
-                        onSubmit={handleSubmit} className="flex flex-col w-full gap-2">
-                        <input
-                            onChange={({ target }) => setName(target.value)}
-                            type="text"
-                            placeholder="Seu nome completo"
-                            className="bg-gray-900 rounded px-5 h-14"
-                        />
-
-                        <input
-                            onChange={({ target }) => setEmail(target.value)}
-                            type="email"
-                            placeholder="Digite seu email"
-                            className="bg-gray-900 rounded px-5 h-14"
-                        />
-
-                        <button
-                            disabled={loading}
-                            type="submit"
-                            className="mt-4 bg-green-500 uppercase py-4 rounded font-bold text-sm hover:bg-green-700 transition disabled:opacity-50">
-                            garantir minha vaga
-                        </button>
-                    </form>
-                </div>
+                <img src="/src/assets/print-home.png" alt="imagem de código" />
             </div>
-
-            <img src="/src/assets/print-home.png" alt="imagem de código" />
-        </div>
+            <Footer />
+        </>
     )
 }
