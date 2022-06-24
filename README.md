@@ -114,6 +114,18 @@ GraphCMS Mutation
 			}
 		}
 
+	Home.tsx
+		handleSubmit {
+			createSubscriber({
+				variables: {
+					name,
+					email
+				}
+			})
+		}
+
+	
+
 Para fazer método POST no graphCMS, é recomendado criar um token
 - Criar o token
 	Project Settings
@@ -143,3 +155,23 @@ crie um arquivo .env.local na raiz com nome
 
 para importar
 	import.meta.env
+
+useMutation retorna um array
+	[posição1: função, posição2: data]
+Para usar #mutations
+
+Code error: 
+	403:
+		Erro acontece porque a função createSubscriber está apenas criando em rascunho e por isso, não tem permissão de receber o data (id)
+
+		Para resolver, precisar uma nova permissão de leitura:
+			Project Settings
+				Edite o projeto criado em "Permanent Auth Tokens"
+				Create Permission
+					Model Subscriber
+					[x] Read
+						Stages Draft (rascunho)
+
+- Typescript
+Evento de form
+	FormEvent
