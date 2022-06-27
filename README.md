@@ -1,7 +1,16 @@
 <h1 align="center">ClassTube</h1>
-<p>Projeto criado no evento Ignite-lab da Rocketseat<p>
+<p>Projeto criado no evento Ignite-lab da Rocketseat, porém com muitas modificações e features implementadas.<p>
 
-<p>Em construção...</p>
+<h2>Instalação</h2>
+Clone o repositório utilizando o terminal
+	
+	git clone https://github.com/evandromottaz/ignite-lab-rocketseat.git
+
+Entre na pasta e rode o comando
+
+	npm install
+
+---
 
 <h2>Tecnologias usadas</h2>
 
@@ -9,7 +18,6 @@
 
 	npm create vite@latest
 
-	
 &#127912; Tailwind
 
 	npm i tailwindcss postcss autoprefixer -D
@@ -26,6 +34,24 @@
 &#128197; Date-fns
 
 	npm i date-fns
+
+🖌️ Classnames
+
+	npm i classnames
+
+	ex de uso:
+	className={
+		classNames('text-blue-200 text-sm', {'text-bold': isBold})
+	}
+
+🗺️ REACT ROUTER
+
+	npm i react-router-dom
+
+🎦 Vime
+
+	npm i @vime/core
+
 ---
 
 <h2>Extensões instaladas</h2>
@@ -38,18 +64,22 @@ Tailwind
 <h2>Estrutura de pastas</h2>
 
     /src
+		/assets
+		...
     	/components
-    		Header.tsx
-    		Lesson.tsx
-    		Logo.tsx
-    		Sidebar.tsx
-    		Video.tsx
+    		....
+		/global
+			MenuContext.tsx
     	/lib
     		apollo.ts
     	/pages
     		Event.tsx
+			Home.tsx
     	/styles
     		global.css
+		App.tsx
+		main.tsx
+		Router.tsx
 
 <h2>Sites úteis</h2>
 
@@ -65,12 +95,16 @@ Tranformar svg em component: https://svg2jsx.com/
 
 - Date-fns - https://date-fns.org/v2.28.0/docs/format
 
+---
+
+<h2>Conceitos aprendidos em aula</h2>
 
 aula 3
 
 aspect-video - 16/9 screen
-React Youtube
+
 react-router-dom
+
 	BrowserRouter
 		App
 	BrowserRouter
@@ -90,22 +124,26 @@ agrupar elementos para ter o efeito hover.
 
 
 Desafios
-- responsive
+- Responsive [x]
 - Criar componente de botão [x]
-- Redirecionar o usuário para a primeira aula se não tiver o slug [x]
-- Criar componente de loading
+- Redirecionar o usuário para a primeira aula na página de event [x]
+- Criar componente de loading [x]
 - Home toda desk e mobile [x]
-- Event toda desk e mobile
+- Menu mobile com useContext [x]
 
 Problemas resolvidos
 - Typescript
 consegui criar um tipo que aceita object literals.
 https://www.typescriptlang.org/docs/handbook/2/objects.html#index-signatures
 
-Resolvido children props https://stackoverflow.com/questions/71788254/react-18-typescript-children-fc
+Children props https://stackoverflow.com/questions/71788254/react-18-typescript-children-fc
+useContext props;
+Permissão de busca de aulas no graphCMS;
+
 
 Aula 4
-GraphCMS Mutation
+<h3 id=mutation>GraphCMS Mutation</h3>
+
 	API Playground
 		Add new [Mutation] click "+"
 
@@ -129,40 +167,50 @@ GraphCMS Mutation
 	
 
 Para fazer método POST no graphCMS, é recomendado criar um token
-- Criar o token
+Criar o token:
+
 	Project Settings
 		Public Content API
 			Create Token
 
 Para não permitir que o front crie novos campos da tabela
+
 	Management API
 		No i'll configure....
 
 Permite a leitura de todos os dados
+
 	Content API
 		Yes..
 
 Criar cadastros na subscriber
+
 	+ Create Permission
 		Model Subscriber
 			[x] Create
 
 Pegar o token criado
+
 	Value
 		inserir no appolo.ts
 
 Criar variáveis de ambiente
 crie um arquivo .env.local na raiz com nome
+
 	VITE_QUALQUER_COISA
 
 para importar
-	import.meta.env
+
+	import.meta.env.QUALQUERCOISA
 
 useMutation retorna um array
-	[posição1: função, posição2: data]
-Para usar #mutations
 
-Code error: 
+	[posição1: função, posição2: data]
+
+Para usar <a href=#mutation>mutations</a>
+
+Code error:
+
 	403:
 		Erro acontece porque a função createSubscriber está apenas criando em rascunho e por isso, não tem permissão de receber o data (id)
 
@@ -175,16 +223,6 @@ Code error:
 						Stages Draft (rascunho)
 
 - Typescript
-Evento de form
+props de evento de formulário
+
 	FormEvent
-
-Problemas resolvidos:
-Permissão de busca de aulas no graphCMS
-
-lib
-classnames
-	npm i classnames
-	ex:
-	className={
-		classNames('text-blue-200 text-sm', {'text-bold': isBold})
-	}
