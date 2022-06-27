@@ -4,6 +4,7 @@ type ButtonProps = {
     type: string;
     href: string;
     children: ReactNode
+    onClick?: () => void
 }
 
 type ColorProps = {
@@ -15,9 +16,9 @@ const color: ColorProps = {
     blue: 'text-blue-500 border-blue-500 hover:text-gray-900 hover:bg-blue-500'
 }
 
-export function Button({ type, href, children }: ButtonProps) {
+export function Button({ type, href, children, onClick }: ButtonProps) {
     return (
-        <a href={href} className={`p-4 text-sm border flex items-center rounded font-semibold uppercase gap-2 justify-center transition-colors ${color[type]}`}>
+        <a href={href} onClick={onClick} className={`p-4 text-sm border flex items-center rounded font-semibold uppercase gap-2 justify-center transition-colors ${color[type]}`}>
             {children}
         </a>
     )

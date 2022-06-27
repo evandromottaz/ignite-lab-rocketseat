@@ -81,7 +81,8 @@ export function Home() {
                         </form>
 
                         <Button type="blue"
-                            href="/event/lesson/abertura-do-evento-ignite-lab">
+                            href=""
+                            onClick={() => navigate('/event')}>
                             Pular Cadastro
                         </Button>
                     </div>
