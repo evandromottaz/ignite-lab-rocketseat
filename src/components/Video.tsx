@@ -52,7 +52,7 @@ export function Video({ lessonSlug }: VideoProps) {
             <VideoPlayer videoId={data.lesson.videoId} />
 
             <div className="p-8 max-w-[1100px] mx-auto">
-                <div className="flex items-start gap-16 mobile:flex-col mobile:items-stretch mobile:gap-6">
+                <div className="flex items-start gap-16 tablet:flex-col mobile:items-stretch mobile:gap-6">
                     <div className="flex-1">
                         <h1 className="text-2xl font-bold mobile:text-lg">{data.lesson.title}</h1>
 
