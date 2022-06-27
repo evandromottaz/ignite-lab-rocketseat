@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import { Footer } from "./components/Footer";
 import { Event } from "./pages/Event";
 import { Home } from "./pages/Home";
 
