@@ -109,30 +109,31 @@ react-router-dom
 		App
 	BrowserRouter
 
-- Router.tsx
+Router.tsx
+
 	Routes
 		Route path="/:id" element={Component}
 	Routes
 
-- Component
-
-
 Tailwind
+
 agrupar elementos para ter o efeito hover.
+
 	elemento pai className="group"
 		filho className="group-hover:text-green-100"
 
 
 Desafios
-- Responsive [x]
-- Criar componente de botão [x]
-- Redirecionar o usuário para a primeira aula na página de event [x]
-- Criar componente de loading [x]
-- Home toda desk e mobile [x]
-- Menu mobile com useContext [x]
+[x] Responsive
+[x] Criar componente de botão
+[x] Redirecionar o usuário para a primeira aula na página de event [x]
+[x] Criar componente de loading 
+[x] Home toda desk e mobile 
+[x] Menu mobile com useContext 
 
 Problemas resolvidos
 - Typescript
+
 consegui criar um tipo que aceita object literals.
 https://www.typescriptlang.org/docs/handbook/2/objects.html#index-signatures
 
