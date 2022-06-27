@@ -1,25 +1,29 @@
+import { useContext } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
-import { Loading } from "../components/Loading";
 import { Sidebar } from "../components/Sidebar";
 import { Video } from "../components/Video";
+import { GlobalContext } from "../global/MenuContext";
 
 export function Event() {
     const { slug } = useParams<{ slug: string }>()
+    const { isOpenMenu } = useContext(GlobalContext)
 
     return (
-        <div className="flex flex-col min-h-screen">
+        <>
             <Header />
-            <main className="flex-1 flex mobile:flex-col">
-                {slug ?
-                    <Video lessonSlug={slug} /> :
-                    <Navigate to="/event/lesson/abertura-do-evento-ignite-lab" />
-                }
+            <div className={`flex flex-col min-h-screen max-w-[1440px] mx-auto ${isOpenMenu && 'h-screen overflow-hidden'}`}>
+                <main className="flex flex-1 mobile:flex-col mobile:mt-20">
+                    {slug ?
+                        <Video lessonSlug={slug} /> :
+                        <Navigate to="/event/lesson/abertura-do-evento-ignite-lab" />
+                    }
 
-                <Sidebar />
-            </main>
-            <Footer />
-        </div>
+                    <Sidebar />
+                </main>
+                <Footer />
+            </div>
+        </>
     )
 }

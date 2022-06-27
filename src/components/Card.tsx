@@ -23,8 +23,8 @@ export function Card({ title, children, url, type }: CardProps) {
     }
 
     return (
-        <a className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors" href={url}>
-            <div className="bg-green-700 h-full p-6 flex items-center">
+        <a className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors max-w-[502px]" href={url}>
+            <div className="bg-green-700 p-6 flex items-center">
                 {phosphorIcons(type)}
             </div>
 
@@ -38,7 +38,7 @@ export function Card({ title, children, url, type }: CardProps) {
                 </p>
             </div>
 
-            <div className="h-full p-6 flex items-center">
+            <div className="p-6 flex items-center flex-1">
                 <CaretRight size={24} />
             </div>
         </a>

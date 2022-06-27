@@ -48,10 +48,10 @@ export function Video({ lessonSlug }: VideoProps) {
     if (!data) return <Loading />
 
     return (
-        <div className="flex-1 mb-20">
+        <div className="flex-1">
             <VideoPlayer videoId={data.lesson.videoId} />
 
-            <div className="p-8 max-w-[1100px] mx-auto">
+            <div className="p-6 mx-auto">
                 <div className="flex items-start gap-16 tablet:flex-col mobile:items-stretch mobile:gap-6">
                     <div className="flex-1">
                         <h1 className="text-2xl font-bold mobile:text-lg">{data.lesson.title}</h1>
@@ -80,7 +80,7 @@ export function Video({ lessonSlug }: VideoProps) {
                     </div>
                 </div>
 
-                <div className="gap-8 mt-20 flex tablet:flex-wrap">
+                <div className="gap-8 mt-20 flex tablet:flex-col">
                     <Card
                         type="file"
                         title="Material complementar"

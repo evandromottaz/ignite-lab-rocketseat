@@ -6,7 +6,6 @@ export function Logo() {
       height="30"
       fill="none"
       viewBox="0 0 237 34"
-      className="tablet:mx-auto"
     >
       <path
         fill="#fff"
