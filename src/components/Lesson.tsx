@@ -20,13 +20,13 @@ export function Lesson({ title, slug, availableAt, type }: LessonProps) {
 
     const isActiveLesson = slug === params.slug
     return (
-        <Link to={`/event/lesson/${slug}`} className='group'>
+        <Link to={`/event/lesson/${slug}`} className='group z-10'>
             <span className="text-gray-300">
                 {availableDateFormatted}
             </span>
 
             <div className={
-                classNames('rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500 transition-colors', { 'bg-green-500': isActiveLesson })
+                classNames('rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500 transition-colors relative before:bg-green-500 before:w-3 before:h-3 before:rotate-45 before:-left-2 before:top-[calc(50%-6px)] before:-z-10', { 'bg-green-500 border-green-500 before:absolute': isActiveLesson })
             }>
                 <header className="flex items-center justify-between">
                     {
