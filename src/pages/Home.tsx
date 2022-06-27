@@ -5,6 +5,7 @@ import { Button } from "../components/Button";
 import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
 import { ReactLogo } from "../components/ReactLogo";
+import code from '../assets/code.png'
 
 const CREATE_SUBSCRIBER_MUTATION = gql`
     mutation CreateSubscriber($name: String!, $email: String!) {
@@ -86,7 +87,7 @@ export function Home() {
                     </div>
                 </div>
 
-                <img src='/assets/code.png' alt="imagem de código" />
+                <img src={code} alt="imagem de código" />
             </div>
             <Footer />
         </>
