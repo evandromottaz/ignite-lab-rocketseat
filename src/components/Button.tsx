@@ -1,9 +1,9 @@
-import React from "react";
+import { ReactNode } from "react";
 
 type ButtonProps = {
     type: string;
     href: string;
-    children: React.ReactNode
+    children: ReactNode
 }
 
 type ColorProps = {
