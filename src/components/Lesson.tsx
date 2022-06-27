@@ -3,6 +3,8 @@ import { isPast, format } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 import { Link, useParams } from 'react-router-dom';
 import classNames from 'classnames';
+import { useContext } from 'react';
+import { GlobalContext } from '../global/MenuContext';
 
 
 type LessonProps = {
@@ -17,17 +19,24 @@ export function Lesson({ title, slug, availableAt, type }: LessonProps) {
     const availableDateFormatted = format(availableAt, "EEEE' • 'd' de 'MMMM' • 'k'h'mm", { locale: ptBR })
 
     const params = useParams<{ slug: string }>()
-
     const isActiveLesson = slug === params.slug
+
+    const { setIsOpenMenu } = useContext(GlobalContext)
     return (
-        <Link to={`/event/lesson/${slug}`} className='group z-10'>
+        <Link
+            to={`/event/lesson/${slug}`}
+            className='group z-10'
+            onClick={() => setIsOpenMenu(prev => !prev)}
+        >
             <span className="text-gray-300">
                 {availableDateFormatted}
             </span>
 
             <div className={
-                classNames('rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500 transition-colors relative before:bg-green-500 before:w-3 before:h-3 before:rotate-45 before:-left-2 before:top-[calc(50%-6px)] before:-z-10', { 'bg-green-500 border-green-500 before:absolute': isActiveLesson })
-            }>
+                classNames('rounded border  p-4 mt-2 group-hover:border-green-500 transition-colors relative before:bg-green-500 before:w-3 before:h-3 before:rotate-45 before:-left-2 before:top-[calc(50%-6px)] before:-z-10', {
+                    'bg-green-500 border-green-500 before:absolute': isActiveLesson,
+                    'border-gray-500': !isActiveLesson
+                })}>
                 <header className="flex items-center justify-between">
                     {
                         isLessonAvaible ?

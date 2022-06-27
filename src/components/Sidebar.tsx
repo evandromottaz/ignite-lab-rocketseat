@@ -33,7 +33,7 @@ export function Sidebar() {
     return (
         <>
             <aside className={classNames(
-                'bg-gray-700 p-6 border-l border-gray-600 mobile:absolute mobile:w-full z-20 mobile:h-full mobile:overflow-hidden mobile:left-0 w-[348px] flex-shrink-0', {
+                'bg-gray-700 p-6 border-l border-gray-600 mobile:absolute mobile:w-full z-20 mobile:h-screen mobile:left-0 w-[348px] flex-shrink-0', {
                 'mobile:block': isOpenMenu && 'mobile', 'mobile:hidden': !isOpenMenu && 'mobile'
             })}>
                 <span className="font-bold text-2xl pb-6 mb-6 border-b border-gray-500 block">
