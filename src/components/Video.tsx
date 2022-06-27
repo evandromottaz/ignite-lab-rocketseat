@@ -5,6 +5,7 @@ import { Button } from "./Button";
 import { VideoPlayer } from "./VideoPlayer";
 import { Teacher } from "./Teacher";
 import { Card } from "./Card";
+import { Loading } from "./Loading";
 
 const GET_LESSON_SLUG = gql`
     query getLessonSlug($slug: String) {
@@ -44,10 +45,10 @@ export function Video({ lessonSlug }: VideoProps) {
             variables: { slug: lessonSlug }
         })
 
-    if (!data) return <div className="flex-1">Carregando...</div>
+    if (!data) return <Loading />
 
     return (
-        <div className="flex-1">
+        <div className="flex-1 mb-20">
             <VideoPlayer videoId={data.lesson.videoId} />
 
             <div className="p-8 max-w-[1100px] mx-auto">
@@ -79,14 +80,16 @@ export function Video({ lessonSlug }: VideoProps) {
                     </div>
                 </div>
 
-                <div className="gap-8 mt-20 grid grid-cols-2">
+                <div className="gap-8 mt-20 flex">
                     <Card
+                        type="file"
                         title="Material complementar"
                         url="https://efficient-sloth-d85.notion.site/Material-complementar-86d4ef35af16471ebc3ae3eba1a378e5">
                         Acesse o material complementar para acelerar o seu desenvolvimento
                     </Card>
 
                     <Card
+                        type="image"
                         title="Wallpapers exclusivos"
                         url="https://drive.google.com/drive/folders/1mxWnvlqmH7MbVRv2Na9xFNgCQCygM1iR?usp=sharing">
                         Baixe wallpapers exclusivos do Ignite Lab e personalize a sua máquina

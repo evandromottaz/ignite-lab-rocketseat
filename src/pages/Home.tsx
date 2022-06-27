@@ -2,6 +2,7 @@ import { gql, useMutation } from "@apollo/client";
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../components/Footer";
+import { Loading } from "../components/Loading";
 import { Logo } from "../components/Logo";
 import { ReactLogo } from "../components/ReactLogo";
 
@@ -38,9 +39,8 @@ export function Home() {
                 <ReactLogo />
 
                 <div className="w-full max-w-[1100px] flex justify-between mt-20 mx-auto tablet:flex-wrap tablet:justify-center">
-                    <div className="min-w-[390px] max-w-[640px] mobile:block px-7">
+                    <div className="min-w-[390px] max-w-[640px] mobile:block px-7 z-10">
                         <Logo />
-
                         <h1 className="mt-8 text-4xl leading-tight tablet:text-center mobile:text-3xl">
                             Construa uma <strong className="text-blue-500 inline-block">aplicação completa</strong>, do zero, com <strong className="text-blue-500">React JS</strong>
                         </h1>
@@ -50,7 +50,7 @@ export function Home() {
                         </p>
                     </div>
 
-                    <div className="min-w-fit p-8 bg-gray-700 border border-gray-500 rounded mobile:w-full mr-6 z-10">
+                    <div className="min-w-fit p-8 bg-gray-700 border border-gray-500 rounded mobile:w-full mr-6 z-10 tablet:mr-0">
                         <strong className="text-2xl mb-6 block mobile:text-lg">
                             Inscreva-se gratuitamente
                         </strong>
