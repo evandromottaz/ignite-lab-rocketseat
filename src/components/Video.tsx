@@ -1,4 +1,4 @@
-import { CaretRight, Coffee, DiscordLogo, FileArrowDown, Lightning } from "phosphor-react";
+import { DiscordLogo, Lightning } from "phosphor-react";
 import { gql, useQuery } from "@apollo/client";
 import '@vime/core/themes/default.css'
 import { Button } from "./Button";
