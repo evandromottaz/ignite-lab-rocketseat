@@ -80,7 +80,7 @@ export function Video({ lessonSlug }: VideoProps) {
                     </div>
                 </div>
 
-                <div className="gap-8 mt-20 flex">
+                <div className="gap-8 mt-20 flex tablet:flex-wrap">
                     <Card
                         type="file"
                         title="Material complementar"
