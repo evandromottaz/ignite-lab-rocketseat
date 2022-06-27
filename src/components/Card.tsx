@@ -29,16 +29,16 @@ export function Card({ title, children, url, type }: CardProps) {
             </div>
 
             <div className="py-6 leading-relaxed">
-                <strong className="text-2xl">
+                <strong className="text-2xl mobile:text-lg">
                     {title}
                 </strong>
 
-                <p className="text-sm text-gray-200 mt-2">
+                <p className="text-sm text-gray-200 mt-2 mobile:text-xs">
                     {children}
                 </p>
             </div>
 
-            <div className="p-6 flex items-center flex-1">
+            <div className="p-6 flex items-center flex-1 text-blue-500">
                 <CaretRight size={24} />
             </div>
         </a>
