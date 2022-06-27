@@ -1,10 +1,11 @@
 import { gql, useMutation } from "@apollo/client";
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Button } from "../components/Button";
 import { Footer } from "../components/Footer";
-import { Loading } from "../components/Loading";
 import { Logo } from "../components/Logo";
 import { ReactLogo } from "../components/ReactLogo";
+import blurHome from '../assets/blurHome.png'
 
 const CREATE_SUBSCRIBER_MUTATION = gql`
     mutation CreateSubscriber($name: String!, $email: String!) {
@@ -56,7 +57,7 @@ export function Home() {
                         </strong>
 
                         <form
-                            onSubmit={handleSubmit} className="flex flex-col w-full gap-2">
+                            onSubmit={handleSubmit} className="flex flex-col w-full gap-2 mb-6">
                             <input
                                 onChange={({ target }) => setName(target.value)}
                                 type="text"
@@ -78,10 +79,15 @@ export function Home() {
                                 garantir minha vaga
                             </button>
                         </form>
+
+                        <Button type="blue"
+                            href="/event/lesson/abertura-do-evento-ignite-lab">
+                            Pular Cadastro
+                        </Button>
                     </div>
                 </div>
 
-                <img src="/src/assets/print-home.png" alt="imagem de código" />
+                <img src={blurHome} alt="imagem de código" />
             </div>
             <Footer />
         </>
