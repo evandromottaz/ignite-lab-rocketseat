@@ -1,5 +1,5 @@
 import { CaretRight, FileArrowDown, Image } from "phosphor-react";
-import { ReactFragment, ReactNode } from "react";
+import { ReactNode } from "react";
 
 type CardProps = {
     title: string;
