@@ -1,7 +1,8 @@
 <h1 align="center">ClassTube</h1>
 <p>Projeto criado no evento Ignite-lab da Rocketseat, porém com muitas modificações e features implementadas.<p>
 
-Live: https://ignite-lab-rocketseat-bice.vercel.app/
+Live: https://classtube.vercel.app/
+Status: ⚠️ Problema com rotas no deploy 
 
 <h2>Instalação</h2>
 Clone o repositório utilizando o terminal
