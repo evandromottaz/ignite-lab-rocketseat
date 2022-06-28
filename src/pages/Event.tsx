@@ -15,6 +15,8 @@ const GET_SLUG_LESSONS_QUERY = gql`
     }
 `
 
+const t = 's'
+
 type GetSlugLessons = {
     lessons: [
         {
@@ -29,21 +31,22 @@ export function Event() {
     const { isOpenMenu } = useContext(MenuContext)
     const { data } = useQuery<GetSlugLessons>(GET_SLUG_LESSONS_QUERY)
 
-    if (!data) return
     return (
         <>
             <Header />
-            <div className={`flex flex-col min-h-screen max-w-[1440px] mx-auto ${isOpenMenu && 'h-screen overflow-hidden'}`}>
+
+            <div className={`flex flex-col max-w-[1440px] mx-auto ${isOpenMenu && 'h-screen overflow-hidden'}`}>
                 <main className="flex flex-1 mobile:flex-col mobile:mt-20">
                     {slug ?
                         <Video lessonSlug={slug} /> :
-                        <Navigate to={`/event/lesson/${data.lessons[0].slug}`} />
+                        <Navigate to={`/event/lesson/${data?.lessons[0].slug}`} />
                     }
 
                     <Sidebar />
                 </main>
-                <Footer />
             </div>
+
+            <Footer />
         </>
     )
 }
