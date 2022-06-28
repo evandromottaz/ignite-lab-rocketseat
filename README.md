@@ -69,18 +69,18 @@ Tailwind
 
 	/src
 		/assets
-			...
-    		/components
-    			....
+			imgs			
+    	/components
+    		files			
 		/global
-			GlobalContext.tsx
-    		/lib
-    			apollo.ts
-    		/pages
-    			Event.tsx
-			Home.tsx
-    		/styles
-    			global.css
+			GlobalContext.tsx			
+    	/lib
+    		apollo.ts			
+    	/pages
+    		Event.tsx
+			Home.tsx			
+    	/styles
+    		global.css
 	App.tsx
 	main.tsx
 	Router.tsx
