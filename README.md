@@ -3,7 +3,7 @@
 
 Live: https://classtube.vercel.app/
 	
-Status: ⚠️ Problema com rotas no deploy 
+Status: ✅ Online
 
 <h2>Instalação</h2>
 Clone o repositório utilizando o terminal
