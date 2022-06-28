@@ -2,6 +2,7 @@
 <p>Projeto criado no evento Ignite-lab da Rocketseat, porém com muitas modificações e features implementadas.<p>
 
 Live: https://classtube.vercel.app/
+	
 Status: ⚠️ Problema com rotas no deploy 
 
 <h2>Instalação</h2>
