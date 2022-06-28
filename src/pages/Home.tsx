@@ -87,6 +87,7 @@ export function Home() {
                         </Button>
                     </div>
                 </div>
+
                 <img src={code} alt="imagem de código" />
             </div>
             <Footer />
