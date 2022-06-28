@@ -3,7 +3,7 @@
 
 Live: https://classtube.vercel.app/
 	
-Status: ⚠️ Problema com rotas no deploy 
+Status: ✅ Online
 
 <h2>Instalação</h2>
 Clone o repositório utilizando o terminal
@@ -48,7 +48,7 @@ Entre na pasta e rode o comando
 		classNames('text-blue-200 text-sm', {'text-bold': isBold})
 	}
 
-🗺️ REACT ROUTER
+🗺️ React Router
 
 	npm i react-router-dom
 
@@ -67,23 +67,23 @@ Tailwind
 
 <h2>Estrutura de pastas</h2>
 
-    /src
+	/src
 		/assets
-		...
+			imgs			
     	/components
-    		....
+    		files			
 		/global
-			MenuContext.tsx
+			GlobalContext.tsx			
     	/lib
-    		apollo.ts
+    		apollo.ts			
     	/pages
     		Event.tsx
-			Home.tsx
+			Home.tsx			
     	/styles
     		global.css
-		App.tsx
-		main.tsx
-		Router.tsx
+	App.tsx
+	main.tsx
+	Router.tsx
 
 <h2>Sites úteis</h2>
 
