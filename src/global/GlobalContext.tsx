@@ -11,7 +11,7 @@ type MenuContextProps = {
 
 export const MenuContext = createContext<MenuContextProps>({
     isOpenMenu: false,
-    setIsOpenMenu: (prev) => !prev
+    setIsOpenMenu: (prev) => prev
 })
 
 export function GlobalContext({ children }: MenuProps) {
