@@ -48,7 +48,7 @@ Entre na pasta e rode o comando
 		classNames('text-blue-200 text-sm', {'text-bold': isBold})
 	}
 
-🗺️ REACT ROUTER
+🗺️ React Router
 
 	npm i react-router-dom
 
