@@ -40,7 +40,7 @@ export function Home() {
                 <ReactLogo />
 
                 <div className="w-full max-w-[1100px] flex justify-between mt-20 mx-auto tablet:flex-wrap tablet:justify-center">
-                    <div className="min-w-[390px] max-w-[640px] mobile:block px-7 z-10">
+                    <div className="min-w-[390px] max-w-[640px] mobile:grid mobile:place-items-center px-7 z-10">
                         <Logo />
                         <h1 className="mt-8 text-4xl leading-tight tablet:text-center mobile:text-3xl">
                             Construa uma <strong className="text-blue-500 inline-block">aplicação completa</strong>, do zero, com <strong className="text-blue-500">React JS</strong>

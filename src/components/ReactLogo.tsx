@@ -6,7 +6,7 @@ export function ReactLogo() {
       height="575"
       fill="none"
       viewBox="0 0 654 575"
-      className="absolute tablet:top-[-2rem]"
+      className="absolute tablet:top-[-2rem] w-full"
     >
       <path
         fill="url(#paint0_linear_24_689)"
