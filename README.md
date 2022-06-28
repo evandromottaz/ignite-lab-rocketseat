@@ -67,20 +67,20 @@ Tailwind
 
 <h2>Estrutura de pastas</h2>
 
-    /src
-	/assets
-		...
-    	/components
-    		....
-	/global
-		GlobalContext.tsx
-    	/lib
-    		apollo.ts
-    	/pages
-    		Event.tsx
-		Home.tsx
-    	/styles
-    		global.css
+	/src
+		/assets
+			...
+    		/components
+    			....
+		/global
+			GlobalContext.tsx
+    		/lib
+    			apollo.ts
+    		/pages
+    			Event.tsx
+			Home.tsx
+    		/styles
+    			global.css
 	App.tsx
 	main.tsx
 	Router.tsx
