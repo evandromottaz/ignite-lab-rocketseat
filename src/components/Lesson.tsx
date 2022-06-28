@@ -4,7 +4,7 @@ import ptBR from 'date-fns/locale/pt-BR'
 import { Link, useParams } from 'react-router-dom';
 import classNames from 'classnames';
 import { useContext } from 'react';
-import { GlobalContext } from '../global/MenuContext';
+import { MenuContext } from '../global/GlobalContext';
 
 
 type LessonProps = {
@@ -21,7 +21,7 @@ export function Lesson({ title, slug, availableAt, type }: LessonProps) {
     const params = useParams<{ slug: string }>()
     const isActiveLesson = slug === params.slug
 
-    const { setIsOpenMenu } = useContext(GlobalContext)
+    const { setIsOpenMenu } = useContext(MenuContext)
     return (
         <Link
             to={`/event/lesson/${slug}`}

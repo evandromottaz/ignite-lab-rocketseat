@@ -1,10 +1,10 @@
 import { List, X } from "phosphor-react";
 import { useContext } from "react";
-import { GlobalContext } from "../global/MenuContext";
+import { MenuContext } from "../global/GlobalContext";
 import { Logo } from "./Logo";
 
 export function Header() {
-    const { setIsOpenMenu, isOpenMenu } = useContext(GlobalContext)
+    const { setIsOpenMenu, isOpenMenu } = useContext(MenuContext)
 
     return (
         <header className="w-full p-5 flex items-center justify-center bg-gray-700 border-b border-gray-600  mobile:fixed mobile:h-[10vh] z-50 mobile:justify-between">

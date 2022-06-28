@@ -1,17 +1,17 @@
 import { ApolloProvider } from "@apollo/client"
 import { BrowserRouter } from "react-router-dom"
-import { MenuContext } from "./global/MenuContext"
+import { GlobalContext } from "./global/GlobalContext"
 import { client } from "./lib/apollo"
 import { Router } from "./Router"
 
 function App() {
 	return (
 		<ApolloProvider client={client}>
-			<MenuContext>
+			<GlobalContext>
 				<BrowserRouter>
 					<Router />
 				</BrowserRouter>
-			</MenuContext>
+			</GlobalContext>
 		</ApolloProvider>
 	)
 }

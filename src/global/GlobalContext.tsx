@@ -9,15 +9,15 @@ type MenuContextProps = {
     setIsOpenMenu: Dispatch<SetStateAction<boolean>>
 }
 
-export const GlobalContext = createContext<MenuContextProps>({
+export const MenuContext = createContext<MenuContextProps>({
     isOpenMenu: false,
     setIsOpenMenu: (prev) => !prev
 })
 
-export function MenuContext({ children }: MenuProps) {
+export function GlobalContext({ children }: MenuProps) {
     const [isOpenMenu, setIsOpenMenu] = useState(false)
 
-    return <GlobalContext.Provider value={{ isOpenMenu, setIsOpenMenu }}>
+    return <MenuContext.Provider value={{ isOpenMenu, setIsOpenMenu }}>
         {children}
-    </GlobalContext.Provider>
+    </MenuContext.Provider>
 }

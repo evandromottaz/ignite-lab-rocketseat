@@ -1,7 +1,7 @@
 import { gql, useQuery } from "@apollo/client";
 import classNames from "classnames";
 import { useContext } from "react";
-import { GlobalContext } from "../global/MenuContext";
+import { MenuContext } from "../global/GlobalContext";
 import { Lesson } from "./Lesson";
 
 const GET_LESSONS_QUERY = gql`
@@ -28,7 +28,7 @@ type GetLessonsQuery = {
 
 export function Sidebar() {
     const { data } = useQuery<GetLessonsQuery>(GET_LESSONS_QUERY);
-    const { isOpenMenu } = useContext(GlobalContext)
+    const { isOpenMenu } = useContext(MenuContext)
 
     return (
         <>

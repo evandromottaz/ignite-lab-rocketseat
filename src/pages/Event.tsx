@@ -5,13 +5,13 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
 import { Video } from "../components/Video";
-import { GlobalContext } from "../global/MenuContext";
+import { MenuContext } from "../global/GlobalContext";
 
 const GET_SLUG_LESSONS_QUERY = gql`
     query {
-    lessons {
-        slug
-    }
+        lessons {
+            slug
+        }
     }
 `
 
@@ -26,7 +26,7 @@ type GetSlugLessons = {
 
 export function Event() {
     const { slug } = useParams<{ slug: string }>()
-    const { isOpenMenu } = useContext(GlobalContext)
+    const { isOpenMenu } = useContext(MenuContext)
     const { data } = useQuery<GetSlugLessons>(GET_SLUG_LESSONS_QUERY)
 
     if (!data) return
