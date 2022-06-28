@@ -1,3 +1,4 @@
+import { gql, useQuery } from "@apollo/client";
 import { useContext } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { Footer } from "../components/Footer";
@@ -6,10 +7,29 @@ import { Sidebar } from "../components/Sidebar";
 import { Video } from "../components/Video";
 import { GlobalContext } from "../global/MenuContext";
 
+const GET_SLUG_LESSONS_QUERY = gql`
+    query {
+    lessons {
+        slug
+    }
+    }
+`
+
+type GetSlugLessons = {
+    lessons: [
+        {
+            slug: string
+        }
+    ]
+}
+
+
 export function Event() {
     const { slug } = useParams<{ slug: string }>()
     const { isOpenMenu } = useContext(GlobalContext)
+    const { data } = useQuery<GetSlugLessons>(GET_SLUG_LESSONS_QUERY)
 
+    if (!data) return
     return (
         <>
             <Header />
@@ -17,7 +37,7 @@ export function Event() {
                 <main className="flex flex-1 mobile:flex-col mobile:mt-20">
                     {slug ?
                         <Video lessonSlug={slug} /> :
-                        <Navigate to="/event/lesson/abertura-do-evento-ignite-lab" />
+                        <Navigate to={`/event/lesson/${data.lessons[0].slug}`} />
                     }
 
                     <Sidebar />
