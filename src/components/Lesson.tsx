@@ -26,7 +26,7 @@ export function Lesson({ title, slug, availableAt, type }: LessonProps) {
         <Link
             to={`/event/lesson/${slug}`}
             className='group z-10'
-            onClick={() => setIsOpenMenu(prev => !prev)}
+            onClick={() => setIsOpenMenu(false)}
         >
             <span className="text-gray-300">
                 {availableDateFormatted}

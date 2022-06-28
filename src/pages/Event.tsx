@@ -1,4 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
+import classNames from "classnames";
 import { useContext } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { Footer } from "../components/Footer";
@@ -31,23 +32,27 @@ export function Event() {
     const { isOpenMenu } = useContext(MenuContext)
     const { data } = useQuery<GetSlugLessons>(GET_SLUG_LESSONS_QUERY)
 
-    if (data)
-        return (
-            <>
-                <Header />
+    if (!data) return
+    return (
+        <>
+            <Header />
 
-                <div className={`flex flex-col max-w-[1440px] mx-auto ${isOpenMenu && 'h-screen overflow-hidden'}`}>
-                    <main className="flex flex-1 mobile:flex-col mobile:mt-20">
-                        {slug ?
-                            <Video lessonSlug={slug} /> :
-                            <Navigate to={`/event/lesson/${data?.lessons[0].slug}`} />
-                        }
+            <div className={classNames('flex flex-col max-w-[1440px] mx-auto', {
+                'h-screen overflow-hidden': isOpenMenu
+            })}>
+                <main className="flex flex-1 mobile:flex-col mobile:mt-20">
+                    {slug ?
+                        <Video lessonSlug={slug} /> :
+                        <Navigate to={`/event/lesson/${data?.lessons[0].slug}`} />
+                    }
 
-                        <Sidebar />
-                    </main>
-                </div>
+                    <Sidebar />
+                </main>
 
                 <Footer />
-            </>
-        )
+            </div>
+
+
+        </>
+    )
 }
